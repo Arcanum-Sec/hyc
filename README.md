@@ -40,15 +40,38 @@ Then visit <http://localhost:8000>.
 
 ## Deploy to GitHub Pages
 
+Lives at **https://arcanum-sec.github.io/hyc/**
+
+The repo is already initialized with a first commit on `main`. To publish:
+
 ```bash
-git init && git add -A && git commit -m "Hacking Your Career guide"
-git branch -M main
-git remote add origin git@github.com:<user>/<repo>.git
-git push -u origin main
+gh auth login
 ```
 
-Then in the repo: **Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)`**.
-The site appears at `https://<user>.github.io/<repo>/`.
+```bash
+gh repo create Arcanum-Sec/hyc --public --source=. --remote=origin --push
+```
+
+```bash
+gh api -X POST repos/Arcanum-Sec/hyc/pages -f "source[branch]=main" -f "source[path]=/"
+```
+
+Or enable it by hand: **Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)`**.
+First build takes a minute or two. After that, every `git push` to `main` redeploys.
+
+Subsequent updates:
+
+```bash
+git add -A && git commit -m "your message" && git push
+```
+
+### Why the paths work at a subpath
+
+Pages serves this as a *project* site under `/hyc/`, not at a domain root. Every asset
+reference in `index.html` is relative (`assets/css/styles.css`, not `/assets/...`), so it
+resolves correctly under the subpath. If you ever add a link or image, keep it relative —
+a leading slash will 404 in production while still working locally.
+
 
 ## Editing notes
 
