@@ -450,6 +450,11 @@
           <div class="chips"><span class="chip train">Free training</span><span class="chip free">Free cert</span></div>
         </div>
         <div class="res-row">
+          <div><div class="res-name"><a href="https://flare.io/flare-academy/trainings">Flare Academy</a></div>
+            <div class="res-note">Free researcher-led training sessions on dark web investigation, deanonymizing threat actors, ransomware infiltration and cyber threat intelligence, with CPE credits toward certification renewals. The attached Discord carries the session replays and 10,000+ practitioners, which makes it a community as much as a course catalog.</div></div>
+          <div class="chips"><span class="chip train">Free training</span><span class="chip">CPE credits</span></div>
+        </div>
+        <div class="res-row">
           <div><div class="res-name"><a href="https://www.classcentral.com/subject/blue-team?free=true">Class Central: Blue Team</a></div>
             <div class="res-note">Aggregator across providers. Filter to free. Useful for finding university courses that were quietly published for nothing.</div></div>
           <div class="chips"><span class="chip free">Free</span></div>
@@ -2065,6 +2070,73 @@ site:https://www.linkedin.com/jobs/ "BTL1" OR "GCIH" OR "GCFE"</pre>
       if (first > -1) mark(first);
     }, { rootMargin: '-10% 0px -70% 0px', threshold: 0 });
     sections.forEach(function (s) { if (s) io.observe(s); });
+  })();
+</script>
+
+  <!-- ══════════════════ QR POPOUT ══════════════════ -->
+  <div class="qr-dock" id="qrDock">
+    <button type="button" class="qr-tab" id="qrTab" aria-expanded="false" aria-controls="qrPanel">
+      <svg class="qr-ico" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 3h7v7H3V3zm2 2v3h3V5H5zM14 3h7v7h-7V3zm2 2v3h3V5h-3zM3 14h7v7H3v-7zm2 2v3h3v-3H5z"/>
+        <path d="M14 14h3v3h-3zM18 14h3v3h-3zM14 18h3v3h-3zM18 18h3v3h-3z"/>
+      </svg>
+      <span class="qr-tab-txt">Scan</span>
+    </button>
+
+    <div class="qr-panel" id="qrPanel" role="dialog" aria-label="Save this guide" hidden>
+      <p class="qr-h">Save this guide</p>
+      <div class="qr-code"><svg class="qr-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges" role="img" aria-label="QR code linking to https://arcanum-sec.github.io/hyc/"><rect width="33" height="33" fill="#fff"/><path d="M2 2h7v1h-7zM11 2h1v1h-1zM13 2h1v1h-1zM16 2h1v1h-1zM21 2h1v1h-1zM24 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM15 3h1v1h-1zM19 3h4v1h-4zM24 3h1v1h-1zM30 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM12 4h2v1h-2zM17 4h1v1h-1zM20 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM26 4h3v1h-3zM30 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM15 5h1v1h-1zM20 5h1v1h-1zM24 5h1v1h-1zM26 5h3v1h-3zM30 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h2v1h-2zM15 6h1v1h-1zM18 6h4v1h-4zM24 6h1v1h-1zM26 6h3v1h-3zM30 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM11 7h1v1h-1zM16 7h2v1h-2zM19 7h1v1h-1zM21 7h2v1h-2zM24 7h1v1h-1zM30 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h7v1h-7zM11 9h2v1h-2zM17 9h1v1h-1zM19 9h1v1h-1zM22 9h1v1h-1zM2 10h1v1h-1zM4 10h1v1h-1zM6 10h1v1h-1zM8 10h1v1h-1zM12 10h1v1h-1zM18 10h2v1h-2zM22 10h1v1h-1zM26 10h1v1h-1zM29 10h1v1h-1zM2 11h1v1h-1zM5 11h1v1h-1zM13 11h3v1h-3zM17 11h1v1h-1zM19 11h2v1h-2zM22 11h3v1h-3zM27 11h1v1h-1zM30 11h1v1h-1zM4 12h8v1h-8zM16 12h1v1h-1zM22 12h2v1h-2zM25 12h2v1h-2zM28 12h3v1h-3zM2 13h2v1h-2zM6 13h1v1h-1zM12 13h1v1h-1zM14 13h3v1h-3zM18 13h3v1h-3zM22 13h4v1h-4zM29 13h1v1h-1zM3 14h2v1h-2zM6 14h1v1h-1zM8 14h1v1h-1zM10 14h1v1h-1zM12 14h1v1h-1zM14 14h1v1h-1zM16 14h4v1h-4zM21 14h4v1h-4zM27 14h1v1h-1zM29 14h2v1h-2zM3 15h4v1h-4zM9 15h1v1h-1zM11 15h1v1h-1zM13 15h2v1h-2zM16 15h1v1h-1zM19 15h1v1h-1zM24 15h1v1h-1zM27 15h1v1h-1zM30 15h1v1h-1zM4 16h5v1h-5zM10 16h1v1h-1zM15 16h1v1h-1zM19 16h2v1h-2zM23 16h3v1h-3zM27 16h1v1h-1zM29 16h2v1h-2zM2 17h2v1h-2zM6 17h1v1h-1zM11 17h1v1h-1zM14 17h1v1h-1zM19 17h1v1h-1zM25 17h1v1h-1zM27 17h1v1h-1zM29 17h1v1h-1zM2 18h1v1h-1zM5 18h1v1h-1zM7 18h3v1h-3zM11 18h1v1h-1zM13 18h2v1h-2zM18 18h3v1h-3zM22 18h3v1h-3zM27 18h1v1h-1zM29 18h2v1h-2zM3 19h1v1h-1zM9 19h1v1h-1zM12 19h1v1h-1zM14 19h2v1h-2zM18 19h1v1h-1zM22 19h3v1h-3zM27 19h2v1h-2zM30 19h1v1h-1zM2 20h1v1h-1zM5 20h1v1h-1zM7 20h5v1h-5zM13 20h2v1h-2zM16 20h1v1h-1zM19 20h1v1h-1zM23 20h1v1h-1zM29 20h2v1h-2zM3 21h5v1h-5zM9 21h1v1h-1zM11 21h1v1h-1zM13 21h5v1h-5zM19 21h1v1h-1zM21 21h2v1h-2zM25 21h1v1h-1zM27 21h1v1h-1zM29 21h1v1h-1zM2 22h1v1h-1zM4 22h1v1h-1zM6 22h1v1h-1zM8 22h1v1h-1zM11 22h1v1h-1zM14 22h1v1h-1zM16 22h2v1h-2zM19 22h1v1h-1zM22 22h5v1h-5zM10 23h5v1h-5zM16 23h1v1h-1zM18 23h1v1h-1zM21 23h2v1h-2zM26 23h1v1h-1zM28 23h3v1h-3zM2 24h7v1h-7zM11 24h1v1h-1zM14 24h2v1h-2zM18 24h1v1h-1zM20 24h3v1h-3zM24 24h1v1h-1zM26 24h2v1h-2zM29 24h2v1h-2zM2 25h1v1h-1zM8 25h1v1h-1zM12 25h2v1h-2zM17 25h1v1h-1zM19 25h2v1h-2zM22 25h1v1h-1zM26 25h2v1h-2zM29 25h2v1h-2zM2 26h1v1h-1zM4 26h3v1h-3zM8 26h1v1h-1zM10 26h1v1h-1zM12 26h1v1h-1zM17 26h3v1h-3zM22 26h5v1h-5zM30 26h1v1h-1zM2 27h1v1h-1zM4 27h3v1h-3zM8 27h1v1h-1zM11 27h5v1h-5zM18 27h1v1h-1zM22 27h2v1h-2zM26 27h1v1h-1zM28 27h3v1h-3zM2 28h1v1h-1zM4 28h3v1h-3zM8 28h1v1h-1zM10 28h3v1h-3zM14 28h2v1h-2zM19 28h1v1h-1zM22 28h1v1h-1zM25 28h3v1h-3zM30 28h1v1h-1zM2 29h1v1h-1zM8 29h1v1h-1zM12 29h5v1h-5zM18 29h3v1h-3zM22 29h1v1h-1zM24 29h1v1h-1zM29 29h1v1h-1zM2 30h7v1h-7zM10 30h1v1h-1zM15 30h1v1h-1zM17 30h8v1h-8zM26 30h1v1h-1zM29 30h2v1h-2z" fill="#000"/></svg></div>
+      <p class="qr-url">arcanum-sec.github.io/hyc</p>
+      <div class="qr-actions">
+        <button type="button" class="qr-copy" id="qrCopy">Copy link</button>
+        <button type="button" class="qr-close" id="qrClose" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  (function () {
+    var dock = document.getElementById('qrDock');
+    var tab = document.getElementById('qrTab');
+    var panel = document.getElementById('qrPanel');
+    var copy = document.getElementById('qrCopy');
+    var close = document.getElementById('qrClose');
+    if (!dock || !tab || !panel) return;
+    var URL_TEXT = 'https://arcanum-sec.github.io/hyc/';
+
+    function setOpen(open) {
+      dock.classList.toggle('open', open);
+      tab.setAttribute('aria-expanded', open ? 'true' : 'false');
+      panel.hidden = !open;
+    }
+    tab.addEventListener('click', function () { setOpen(panel.hidden); });
+    if (close) close.addEventListener('click', function () { setOpen(false); tab.focus(); });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !panel.hidden) { setOpen(false); tab.focus(); }
+    });
+    document.addEventListener('click', function (e) {
+      if (!panel.hidden && !dock.contains(e.target)) setOpen(false);
+    });
+
+    if (copy) copy.addEventListener('click', function () {
+      var done = function (ok) {
+        copy.textContent = ok ? 'Copied' : 'Press \u2318C';
+        setTimeout(function () { copy.textContent = 'Copy link'; }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(URL_TEXT).then(function () { done(true); }, function () { done(false); });
+      } else {
+        try {
+          var t = document.createElement('textarea');
+          t.value = URL_TEXT; t.setAttribute('readonly', '');
+          t.style.position = 'fixed'; t.style.opacity = '0';
+          document.body.appendChild(t); t.select();
+          done(document.execCommand('copy'));
+          document.body.removeChild(t);
+        } catch (err) { done(false); }
+      }
+    });
   })();
 </script>
 

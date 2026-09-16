@@ -374,3 +374,55 @@ ol.steps li::marker { font-family: var(--mono); font-size: .8rem; color: var(--p
 .do-h { font-family: var(--mono); font-size: .61rem; letter-spacing: .15em; text-transform: uppercase; color: var(--ok); margin-bottom: .4rem; }
 .do p { margin: 0; max-width: none; }
 .do p + p { margin-top: .55rem; }
+
+/* ============================================================
+   QR popout — fixed tab, right edge
+   ============================================================ */
+.qr-dock { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 200; display: flex; flex-direction: row-reverse; align-items: center; }
+
+.qr-tab {
+  display: flex; flex-direction: column; align-items: center; gap: .5rem;
+  background: var(--surface-2); color: var(--text-dim);
+  border: 1px solid var(--line); border-right: 0; border-radius: 6px 0 0 6px;
+  padding: .85rem .5rem; cursor: pointer;
+  font: inherit; box-shadow: -4px 0 18px -10px rgba(0,0,0,.5);
+  transition: color .15s, background .15s;
+}
+.qr-tab:hover { color: var(--text); background: var(--surface); }
+.qr-tab:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+.qr-ico { width: 18px; height: 18px; fill: var(--purple); }
+.qr-tab-txt {
+  writing-mode: vertical-rl; text-orientation: mixed;
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .18em; text-transform: uppercase;
+}
+
+.qr-panel {
+  width: 14.5rem; margin-right: -1px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px 0 0 6px;
+  padding: 1rem 1rem 1.1rem; text-align: center;
+  box-shadow: -10px 0 40px -14px rgba(0,0,0,.6);
+}
+.qr-h { font-family: var(--mono); font-size: .62rem; letter-spacing: .15em; text-transform: uppercase; color: var(--purple); margin: 0 0 .7rem; max-width: none; }
+/* QR stays dark-on-white in both themes — scanners expect that polarity */
+.qr-code { background: #fff; border-radius: 3px; padding: .45rem; margin: 0 auto .7rem; width: 10.5rem; }
+.qr-svg { display: block; width: 100%; height: auto; }
+.qr-url { font-family: var(--mono); font-size: .64rem; letter-spacing: .02em; color: var(--text-mute); margin: 0 0 .8rem; word-break: break-all; max-width: none; }
+.qr-actions { display: flex; gap: .4rem; }
+.qr-copy, .qr-close {
+  flex: 1; font-family: var(--mono); font-size: .6rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: .45rem .3rem; cursor: pointer; border-radius: 3px;
+  background: var(--ground); color: var(--text-dim); border: 1px solid var(--line);
+}
+.qr-copy { border-color: color-mix(in srgb, var(--purple) 45%, var(--line)); color: var(--purple); }
+.qr-copy:hover, .qr-close:hover { background: var(--surface-2); }
+.qr-copy:focus-visible, .qr-close:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+
+/* phone: park it bottom-right so it never sits over the reading column */
+@media (max-width: 48rem) {
+  .qr-dock { top: auto; bottom: 1rem; right: 1rem; transform: none; flex-direction: column; align-items: flex-end; gap: .5rem; }
+  .qr-tab { flex-direction: row; border-right: 1px solid var(--line); border-radius: 6px; padding: .55rem .8rem; }
+  .qr-tab-txt { writing-mode: horizontal-tb; }
+  .qr-panel { border-right: 1px solid var(--line); border-radius: 6px; margin-right: 0; width: min(15rem, calc(100vw - 2rem)); }
+}
+@media (prefers-reduced-motion: reduce) { .qr-tab { transition: none; } }
+@media print { .qr-dock { display: none !important; } }
